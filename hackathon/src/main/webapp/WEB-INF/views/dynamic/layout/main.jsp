@@ -10,8 +10,8 @@
 		<title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute></title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    	<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
-    	<link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet" media="screen">
+    	<script src="resources/js/bootstrap.min.js"></script>
+    	<link href="resources/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	</head>
     <body>
         <div class="container">

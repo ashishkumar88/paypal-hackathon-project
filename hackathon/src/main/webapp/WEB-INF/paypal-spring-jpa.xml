@@ -8,10 +8,6 @@
        http://www.springframework.org/schema/tx         
        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-	<bean id="jdbcPropertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-		p:location="/WEB-INF/config/database.properties" />
-
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		p:driverClassName="${jdbc.driver}" p:url="${jdbc.url}" p:username="${jdbc.username}"
