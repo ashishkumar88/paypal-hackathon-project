@@ -17,10 +17,9 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a class="page-scroll" href="#about">About</a></li>
-				<li><a class="page-scroll" href="#services">Services</a></li>
-				<li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
-				<li><a class="page-scroll" href="#contact">Contact</a></li>
+				<li><a class="page-scroll" href="#contents">Contents</a></li>
+				<li><a class="page-scroll" href="#jobs">Jobs</a></li>
+				<li><a class="page-scroll" href="#events">Events</a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

@@ -7,11 +7,23 @@
 	<definition name="base.definition" template="/WEB-INF/views/dynamic/layout/main.jsp">
 		<put-attribute name="title" value=""></put-attribute>
 		<put-attribute name="header" value="/WEB-INF/views/dynamic/section/header.jsp"/>
-        <put-attribute name="footer" value="/WEB-INF/views/dynamic/section/footer.jsp"/>
+	</definition>
+	<definition name="admin.definition" template="/WEB-INF/views/dynamic/layout/admin.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/dynamic/section/header.jsp"/>
 	</definition>
 	<definition name="home" extends="base.definition">
 		<put-attribute name="title" value="Paypal | Welcome"></put-attribute>
 		<put-attribute name="navigation" value="/WEB-INF/views/dynamic/section/navigation.jsp"/>
+		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/section/about.jsp"/>
+		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/section/services.jsp"/>
+		<put-attribute name="section-c" value="/WEB-INF/views/dynamic/section/portfolio.jsp"/>
+		<put-attribute name="section-d" value="/WEB-INF/views/dynamic/section/information.jsp"/>
+		<put-attribute name="section-e" value="/WEB-INF/views/dynamic/section/contact.jsp"/>
+	</definition>
+	<definition name="admin" extends="admin.definition">
+		<put-attribute name="title" value="Paypal | Welcome"></put-attribute>
+		<put-attribute name="navigation" value="/WEB-INF/views/dynamic/section/navigation-admin.jsp"/>
 		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/section/about.jsp"/>
 		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/section/services.jsp"/>
 		<put-attribute name="section-c" value="/WEB-INF/views/dynamic/section/portfolio.jsp"/>

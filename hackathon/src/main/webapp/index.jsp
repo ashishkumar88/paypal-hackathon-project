@@ -1,5 +1,4 @@
-<html>
-<body>
-<h2>Hello World!</h2>
-</body>
-</html>
+<%
+    String redirectURL = "home";
+    response.sendRedirect(redirectURL);
+%>
