@@ -46,7 +46,6 @@
 	<tiles:insertAttribute name="section-b" />
 	<tiles:insertAttribute name="section-c" />
 	<tiles:insertAttribute name="section-d" />
-	<tiles:insertAttribute name="section-e" />
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

@@ -20,6 +20,7 @@
 				<li><a class="page-scroll" href="#contents">Contents</a></li>
 				<li><a class="page-scroll" href="#jobs">Jobs</a></li>
 				<li><a class="page-scroll" href="#events">Events</a></li>
+				<li><a class="page-scroll" href="#reports">Reports</a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->
