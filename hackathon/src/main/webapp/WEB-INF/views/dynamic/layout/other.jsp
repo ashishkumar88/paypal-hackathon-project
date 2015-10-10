@@ -1,13 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!doctype html>
 <html lang="en-US">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute></title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    	<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
+    	<link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet" media="screen">
 	</head>
     <body>
         <div class="container">

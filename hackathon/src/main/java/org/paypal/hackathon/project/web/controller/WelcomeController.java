@@ -8,8 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class WelcomeController {
 
-	@RequestMapping(value="/welcome", method = RequestMethod.GET)
+	@RequestMapping(value="/home", method = RequestMethod.GET)
 	public ModelAndView welcomePage() {
-		return new ModelAndView("welcome", null);
+		return new ModelAndView("home", null);
 	}
 }
