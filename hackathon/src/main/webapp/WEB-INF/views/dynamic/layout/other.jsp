@@ -48,10 +48,10 @@
 	<tiles:insertAttribute name="section-d" />
 	<tiles:insertAttribute name="section-e" />
     <!-- jQuery -->
-    <script src="resource/js/jquery.js"></script>
+    <script src="resources/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="resource/js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="resources/js/jquery.easing.min.js"></script>
