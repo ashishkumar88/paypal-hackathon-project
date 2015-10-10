@@ -47,7 +47,9 @@
 	<tiles:insertAttribute name="section-c" />
 	<tiles:insertAttribute name="section-d" />
     <!-- jQuery -->
-    <script src="resources/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="resources/js/bootstrap.min.js"></script>
@@ -56,9 +58,12 @@
     <script src="resources/js/jquery.easing.min.js"></script>
     <script src="resources/js/jquery.fittext.js"></script>
     <script src="resources/js/wow.min.js"></script>
+    <script src="resources/js/main.js"></script>
+    
 
     <!-- Custom Theme JavaScript -->
     <script src="resources/js/creative.js"></script>
+    <script src="resources/js/ui-bootstrap-tpls-0.14.0.min.js"></script>
 </body>
 </html>
 

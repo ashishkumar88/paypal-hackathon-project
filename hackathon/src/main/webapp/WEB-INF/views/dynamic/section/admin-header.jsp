@@ -4,6 +4,7 @@
 	<div class="header-content">
 		<div class="header-content-inner">
 			<h3>Admin Configuration</h3>
+			<hr class="primary"/>
 		</div>
 	</div>
 </header>
