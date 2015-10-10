@@ -48,18 +48,18 @@
 	<tiles:insertAttribute name="section-d" />
 	<tiles:insertAttribute name="section-e" />
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="resource/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="resources/js/jquery.easing.min.js"></script>
+    <script src="resources/js/jquery.fittext.js"></script>
+    <script src="resources/js/wow.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+    <script src="resources/js/creative.js"></script>
 </body>
 </html>
 
