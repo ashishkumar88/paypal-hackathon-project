@@ -3,12 +3,9 @@
 <section id="jobs">
 	<div class="container">
 		<div class="row">
-			<uib-tabset>
-    			<uib-tab heading="Static title" active="true">
-    			</uib-tab>
-    			<uib-tab heading="Static title" active="true">
-    			</uib-tab>
-  			</uib-tabset>
+			<id="chart">
+  				<svg></svg>
+			</div>
 		</div>
 	</div>
 </section>
