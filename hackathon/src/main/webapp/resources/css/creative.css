@@ -55,6 +55,18 @@ p {
     background-color: #f05f40;
 }
 
+.bg-color1{
+    background-color: #1ABC9C;
+}
+
+.bg-color2{
+    background-color: #5CACE2;
+}
+
+.bg-color3{
+    background-color: #FF9A40;
+}
+
 .bg-dark {
     color: #fff;
     background-color: #222;
@@ -124,26 +136,25 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
-        background-color: transparent;
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+        color: #f05f40;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
+        color: #f05f40;
     }
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: #222;
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+        color: #f05f40;
     }
 
     .navbar-default.affix {
@@ -211,9 +222,18 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
+#dot-matrix {
+    background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1
+}
+
 @media(min-width:768px) {
     header {
-        min-height: 100%;
+        min-height: 69%;
     }
 
     header .header-content {

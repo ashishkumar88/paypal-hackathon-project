@@ -15,7 +15,7 @@
     <meta name="author" content="">
 
     <title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute></title>
-
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css">
 
@@ -39,7 +39,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-app="mainApp">
 	<tiles:insertAttribute name="navigation" />
 	<tiles:insertAttribute name="header" />
 	<tiles:insertAttribute name="section-a" />
@@ -47,6 +47,8 @@
 	<tiles:insertAttribute name="section-c" />
 	<tiles:insertAttribute name="section-d" />
 	<tiles:insertAttribute name="section-e" />
+	<tiles:insertAttribute name="section-f" />
+	<tiles:insertAttribute name="section-g" />
     <!-- jQuery -->
     <script src="resources/js/jquery.js"></script>
 
@@ -57,6 +59,10 @@
     <script src="resources/js/jquery.easing.min.js"></script>
     <script src="resources/js/jquery.fittext.js"></script>
     <script src="resources/js/wow.min.js"></script>
+    <script src="resources/js/main.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.0.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="resources/js/creative.js"></script>
