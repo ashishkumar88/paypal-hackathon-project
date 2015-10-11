@@ -10,6 +10,8 @@ import java.util.Map;
 
 public class PaypalHackathonUtils {
 
+	public static final String DATE_FORMAT_1 = "MM/dd/yyyy HH:mm";
+
 	public static String convertDateToString(Date date, String format) {
 		final SimpleDateFormat formatter = new SimpleDateFormat(format);
 		return formatter.format(date);
