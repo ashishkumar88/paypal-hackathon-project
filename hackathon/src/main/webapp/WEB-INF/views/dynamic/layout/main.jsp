@@ -16,6 +16,12 @@
 
     <title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute></title>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	<script src="resources/js/nv.d3.min.js"></script>
+	<script src="resources/js/graph.js"></script>
+	
+	
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css">
 
@@ -59,15 +65,16 @@
     <script src="resources/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
+    
     <script src="resources/js/jquery.easing.min.js"></script>
     <script src="resources/js/jquery.fittext.js"></script>
     <script src="resources/js/wow.min.js"></script>
     <script src="resources/js/main.js"></script>
-    <script src="resources/js/graph.js"></script>
+    
     
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.0.js"></script>
-    <script src="resources/js/nv.d3.min.js"></script>
+    
 
     <!-- Custom Theme JavaScript -->
     <script src="resources/js/creative.js"></script>
