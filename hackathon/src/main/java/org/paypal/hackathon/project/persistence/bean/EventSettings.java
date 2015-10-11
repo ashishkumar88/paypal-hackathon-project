@@ -10,17 +10,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "event_settings", catalog = "paypalhackathon")
-@NamedQueries({
-	@NamedQuery( name=EventSettings.FIND_EVENT_BY_ID, query="select c from EventSettings c where c.eventSettingsId = :eventSettingsId"),
-})
 public class EventSettings {
 
 	public static final String FIND_EVENT_BY_ID = "findEventById";

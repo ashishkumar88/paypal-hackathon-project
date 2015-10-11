@@ -1,9 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <section id="login" class="border-bottom2">
 	<div class="container">
 		<div class="row">
-			<form action="login" method="post">
-				<input type="hidden" name="${_csrf.parameterName}"
-					value="${_csrf.token}" />
+			${message}
+			<form action="<c:url value='j_spring_security_check' />" method="post" name="loginform">
 				<table class="table-type-2">
 					<tr>
 						<td width="20%"><h5>Username</h5></td>

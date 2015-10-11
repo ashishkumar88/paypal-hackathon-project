@@ -6,15 +6,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "job_settings", catalog = "paypalhackathon")
-@NamedQueries({
-	@NamedQuery( name=JobSettings.FIND_JOB_BY_ID, query="select c from JobSettings c where c.jobSettingsId = :jobSettingsId"),
-})
 public class JobSettings {
 
 	public static final String FIND_JOB_BY_ID = "findJobById";

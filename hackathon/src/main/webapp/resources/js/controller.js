@@ -13,13 +13,13 @@ mainApp.controller("loginController", function($scope, $location, $http) {
 			"address2" : $scope.formData.address2,
 			"city" : $scope.formData.city,
 			"stateCode" : $scope.formData.stateCode,
-			"emailId" : $scope.formData.emailId,
+			"emailId" : $scope.formData.email,
 			"mobileNumber" : $scope.formData.mobileNumber,
 			"password" : $scope.formData.password,
 			"zipCode" : $scope.formData.zipCode,
 		};
 	    $http({
-	    	url: 'login/register',
+	    	url: 'login-user/register',
 		    method: "POST",
 		    data: params,
 		    headers: {'Content-Type': 'application/json'}
@@ -36,7 +36,7 @@ mainApp.controller("loginController", function($scope, $location, $http) {
 	$scope.login = function() {
 		var params = $scope.formData;
 	    $http({
-	    	url: 'login/process',
+	    	url: 'login-user/process',
 		    method: "POST",
 		    data: params,
 		    headers: {'Content-Type': 'application/json'}

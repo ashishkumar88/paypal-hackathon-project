@@ -25,6 +25,8 @@
 				<value>org.paypal.hackathon.project.persistence.bean.EventSettings</value>
 				<value>org.paypal.hackathon.project.persistence.bean.JobSettings</value>
 				<value>org.paypal.hackathon.project.persistence.bean.User</value>
+				<value>org.paypal.hackathon.project.persistence.bean.Users</value>
+				<value>org.paypal.hackathon.project.persistence.bean.UserRoles</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

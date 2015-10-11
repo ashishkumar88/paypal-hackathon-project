@@ -30,9 +30,6 @@
     <!-- Import Spring-JPA-related configuration -->
     <import resource="paypal-spring-jpa.xml"/>
  
-    <!-- Import Spring-Security-related configuration -->
-    <import resource="paypal-spring-security.xml"/>
- 
     <!-- Import Spring-Batch configuration -->
     <import resource="paypal-batch.xml"/>
  

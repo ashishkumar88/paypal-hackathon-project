@@ -12,21 +12,43 @@
 		<put-attribute name="title" value=""></put-attribute>
 		<put-attribute name="header" value="/WEB-INF/views/dynamic/section/admin-header.jsp"/>
 	</definition>
+	<definition name="login.definition" template="/WEB-INF/views/dynamic/layout/login.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+	</definition>
 	<definition name="home" extends="base.definition">
 		<put-attribute name="title" value="Paypal | Welcome"></put-attribute>
 		<put-attribute name="navigation" value="/WEB-INF/views/dynamic/section/navigation.jsp"/>
-		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/section/about.jsp"/>
-		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/section/services.jsp"/>
-		<put-attribute name="section-c" value="/WEB-INF/views/dynamic/section/portfolio.jsp"/>
-		<put-attribute name="section-d" value="/WEB-INF/views/dynamic/section/information.jsp"/>
+		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/pages/programs.jsp"/>
+		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/pages/events.jsp"/>
+		<put-attribute name="section-c" value="/WEB-INF/views/dynamic/pages/support.jsp"/>
+		<put-attribute name="section-d" value="/WEB-INF/views/dynamic/section/about.jsp"/>
 		<put-attribute name="section-e" value="/WEB-INF/views/dynamic/section/contact.jsp"/>
+		<put-attribute name="section-f" value="/WEB-INF/views/dynamic/pages/rfp.jsp"/>
+		<put-attribute name="section-g" value="/WEB-INF/views/dynamic/pages/jobs.jsp"/>
+		<put-attribute name="section-h" value="/WEB-INF/views/dynamic/section/footer.jsp"/>
 	</definition>
 	<definition name="admin" extends="admin.definition">
-		<put-attribute name="title" value="Paypal Admin| Welcome"></put-attribute>
+		<put-attribute name="title" value="Paypal | Admin"></put-attribute>
 		<put-attribute name="navigation" value="/WEB-INF/views/dynamic/section/navigation-admin.jsp"/>
 		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/pages/contentcreation.jsp"/>
 		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/pages/jobcreation.jsp"/>
 		<put-attribute name="section-c" value="/WEB-INF/views/dynamic/pages/eventcreation.jsp"/>
 		<put-attribute name="section-d" value="/WEB-INF/views/dynamic/pages/reportgeneration.jsp"/>
+		<put-attribute name="section-e" value="/WEB-INF/views/dynamic/section/footer.jsp"/>
+	</definition>
+	<definition name="login" extends="login.definition">
+		<put-attribute name="title" value="Paypal | Login"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/dynamic/section/login-header.jsp"/>
+		<put-attribute name="navigation" value="/WEB-INF/views/dynamic/section/navigation-login.jsp"/>
+		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/pages/loginForm.jsp"/>
+		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/section/footer.jsp"/>
+	</definition>
+	
+	<definition name="loginsignup" extends="login.definition">
+		<put-attribute name="title" value="Paypal | Login Signup"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/dynamic/section/login-signup-header.jsp"/>
+		<put-attribute name="navigation" value="/WEB-INF/views/dynamic/section/navigation-login.jsp"/>
+		<put-attribute name="section-a" value="/WEB-INF/views/dynamic/pages/loginSignupForm.jsp"/>
+		<put-attribute name="section-b" value="/WEB-INF/views/dynamic/section/footer.jsp"/>
 	</definition>
 </tiles-definitions>

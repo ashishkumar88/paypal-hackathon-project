@@ -29,7 +29,7 @@ public class LoginRestController {
 
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value="/login/register", method=RequestMethod.POST)
+	@RequestMapping(value="/login-user/register", method=RequestMethod.POST)
 	public Map<String,Object> userRegister(@RequestBody UserRegistrationRequestView userRegistrationRequestView){
 		Map<String,Object> model = new HashMap<String,Object>();
 		ResponseStatusView responseStatusView = this.userService.registerUser(userRegistrationRequestView);
@@ -40,7 +40,7 @@ public class LoginRestController {
 
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
-	@RequestMapping(value="/login/process", method=RequestMethod.POST)
+	@RequestMapping(value="/login-user/process", method=RequestMethod.POST)
 	public Map<String,Object> loginRegister(@RequestBody LoginRequestView loginRequestView){
 		Map<String,Object> model = new HashMap<String,Object>();
 		ResponseStatusView responseStatusView = this.userService.loginUser(loginRequestView);

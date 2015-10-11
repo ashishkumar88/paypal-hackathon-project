@@ -6,16 +6,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "content_settings", catalog = "paypalhackathon")
-@NamedQueries({
-	@NamedQuery( name=ContentSettings.FIND_CONTENT_BY_ID, query="select c from ContentSettings c where c.contentSettingsId = :contentSettingsId"),
-	@NamedQuery( name=ContentSettings.FIND_CONTENT_BY_STRING_ID, query="select c from ContentSettings c where c.contentId = :contentId")
-})
 public class ContentSettings implements java.io.Serializable {
 
 	/**

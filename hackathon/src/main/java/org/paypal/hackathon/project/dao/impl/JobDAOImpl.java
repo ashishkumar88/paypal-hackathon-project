@@ -11,10 +11,8 @@ import org.paypal.hackathon.project.dao.JobDAO;
 import org.paypal.hackathon.project.persistence.bean.JobSettings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@Transactional
 public class JobDAOImpl implements JobDAO{
 
 	@Autowired

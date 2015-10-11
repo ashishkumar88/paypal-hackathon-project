@@ -125,12 +125,17 @@
 					<tr>
 						<td width="20%"><h5>Zip Code</h5></td>
 						<td><input type="text" placeholder="Zip Code" ng-model="formData.zipCode"
-							name="zipCode" required="required" /></td>
+							name="zipCode" required="required" size="5"/></td>
 					</tr>
 					<tr>
 						<td width="20%"><h5>Email</h5></td>
 						<td><input type="email" placeholder="Email" ng-model="formData.email"
 							name="email" required="required" /></td>
+					</tr>
+					<tr>
+						<td width="20%"><h5>Mobile Number</h5></td>
+						<td><input type="text" placeholder="Mobile Number" ng-model="formData.mobileNumber"
+							name="mobileNumber" required="required" size="11"/></td>
 					</tr>
 					<tr>
 						<td width="20%"><h5>Password</h5></td>
