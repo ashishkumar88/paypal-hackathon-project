@@ -3,7 +3,7 @@
 <header>
 	<div class="header-content border-bottom1">
 		<div class="header-content-inner">
-			<h3>Admin Configuration</h3>
+			<h3>Login</h3>
 			<hr class="primary"/>
 		</div>
 	</div>

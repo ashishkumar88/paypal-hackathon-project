@@ -7,7 +7,7 @@
 <html lang="en">
 
 <head>
-
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="resources/css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="resources/css/creative.css" type="text/css">
+    <link rel="stylesheet" href="resources/css/creative-admin.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,16 +39,15 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-app="mainApp">
 	<tiles:insertAttribute name="navigation" />
 	<tiles:insertAttribute name="header" />
 	<tiles:insertAttribute name="section-a" />
 	<tiles:insertAttribute name="section-b" />
-	<tiles:insertAttribute name="section-c" />
-	<tiles:insertAttribute name="section-d" />
-	<tiles:insertAttribute name="section-e" />
     <!-- jQuery -->
-    <script src="resources/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="resources/js/bootstrap.min.js"></script>
@@ -57,9 +56,14 @@
     <script src="resources/js/jquery.easing.min.js"></script>
     <script src="resources/js/jquery.fittext.js"></script>
     <script src="resources/js/wow.min.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script src="resources/js/controller.js"></script>
+    
 
     <!-- Custom Theme JavaScript -->
     <script src="resources/js/creative.js"></script>
+    <script src="resources/js/ui-bootstrap-tpls-0.14.0.min.js"></script>
+    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
 </body>
 </html>
 

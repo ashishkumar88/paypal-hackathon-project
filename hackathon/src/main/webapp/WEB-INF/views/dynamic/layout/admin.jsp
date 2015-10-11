@@ -46,6 +46,7 @@
 	<tiles:insertAttribute name="section-b" />
 	<tiles:insertAttribute name="section-c" />
 	<tiles:insertAttribute name="section-d" />
+	<tiles:insertAttribute name="section-e" />
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
@@ -65,6 +66,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="resources/js/creative.js"></script>
     <script src="resources/js/ui-bootstrap-tpls-0.14.0.min.js"></script>
+    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
 </body>
 </html>
 

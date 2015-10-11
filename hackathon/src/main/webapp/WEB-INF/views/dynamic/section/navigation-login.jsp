@@ -16,16 +16,6 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a class="page-scroll" href="#programs">Programs</a></li>
-				<li><a class="page-scroll" href="#events">Events</a></li>
-				<li><a class="page-scroll" href="#support">Support</a></li>
-				<li><a class="page-scroll" href="#about">About</a></li>
-				<li><a class="page-scroll" href="#contact">Contact</a></li>
-				<li><a class="page-scroll" href="#rfp">RFP</a></li>
-				<li><a class="page-scroll" href="#jobs">Jobs</a></li>
-				<li><a class="page-scroll" href="login-signup">Login/Sign-Up</a></li>
-			</ul>
 		</div>
 		<!-- /.navbar-collapse -->
 	</div>

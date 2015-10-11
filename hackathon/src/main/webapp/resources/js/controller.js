@@ -1,3 +1,56 @@
+/**
+ * Angular Controller for the Login and Sign Up
+ */
+mainApp.controller("loginController", function($scope, $location, $http) {
+	$scope.formData = {};
+	$scope.signup = function() {
+		var params = {
+			"gender" : $scope.formData.gender,
+			"firstName" : $scope.formData.firstName,
+			"middleName" : $scope.formData.middleName,
+			"lastName" : $scope.formData.lastName,
+			"address1" : $scope.formData.address1,
+			"address2" : $scope.formData.address2,
+			"city" : $scope.formData.city,
+			"stateCode" : $scope.formData.stateCode,
+			"emailId" : $scope.formData.emailId,
+			"mobileNumber" : $scope.formData.mobileNumber,
+			"password" : $scope.formData.password,
+			"zipCode" : $scope.formData.zipCode,
+		};
+	    $http({
+	    	url: 'login/register',
+		    method: "POST",
+		    data: params,
+		    headers: {'Content-Type': 'application/json'}
+		}).success(function(data) {
+			window.location.href = "home";
+		}).error(function(data,status) {
+			$.blockUI({
+				message : data+status
+			});
+			$(document).click($.unblockUI);
+		});
+	};
+	
+	$scope.login = function() {
+		var params = $scope.formData;
+	    $http({
+	    	url: 'login/process',
+		    method: "POST",
+		    data: params,
+		    headers: {'Content-Type': 'application/json'}
+		}).success(function(data) {
+			window.location.href = "home";
+		}).error(function(data,status) {
+			$.blockUI({
+				message : data+status
+			});
+			$(document).click($.unblockUI);
+		});
+	};
+});
+
 mainApp.controller("jobController", function($scope, $http) {
 	$scope.parent = {}
 	$scope.title = ''

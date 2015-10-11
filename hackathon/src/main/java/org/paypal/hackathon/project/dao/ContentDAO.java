@@ -9,7 +9,7 @@ public interface ContentDAO {
 	public List<ContentSettings> getAllContents();
 	public ContentSettings getContentById(Long Id);
 	public ContentSettings getContentById(String Id);
-	public void save(ContentSettings contentSettings);
-	public void update(ContentSettings contentSettings);
-	public void deleteContent(ContentSettings contentSettings);
+	public boolean save(ContentSettings contentSettings);
+	public boolean update(ContentSettings contentSettings);
+	public boolean deleteContent(ContentSettings contentSettings);
 }

@@ -21,13 +21,14 @@ public class JobDAOImpl implements JobDAO{
 	private SessionFactory sessionFactory;
 
 	@Override
-	public void save(JobSettings jobSettings) {
+	public boolean save(JobSettings jobSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(jobSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -36,16 +37,18 @@ public class JobDAOImpl implements JobDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 	@Override
-	public void update(JobSettings jobSettings) {
+	public boolean update(JobSettings jobSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(jobSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -54,6 +57,7 @@ public class JobDAOImpl implements JobDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 	@Override
@@ -78,13 +82,14 @@ public class JobDAOImpl implements JobDAO{
 	}
 
 	@Override
-	public void deleteJob(JobSettings job) {
+	public boolean deleteJob(JobSettings job) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.delete(job);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -93,5 +98,6 @@ public class JobDAOImpl implements JobDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 }
