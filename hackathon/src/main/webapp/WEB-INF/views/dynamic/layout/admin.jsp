@@ -39,7 +39,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top"  ng-app="mainApp">
 	<tiles:insertAttribute name="navigation" />
 	<tiles:insertAttribute name="header" />
 	<tiles:insertAttribute name="section-a" />
@@ -59,6 +59,7 @@
     <script src="resources/js/jquery.fittext.js"></script>
     <script src="resources/js/wow.min.js"></script>
     <script src="resources/js/main.js"></script>
+    <script src="resources/js/controller.js"></script>
     
 
     <!-- Custom Theme JavaScript -->
