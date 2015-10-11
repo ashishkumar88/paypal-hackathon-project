@@ -49,6 +49,7 @@
 	<tiles:insertAttribute name="section-e" />
 	<tiles:insertAttribute name="section-f" />
 	<tiles:insertAttribute name="section-g" />
+	<tiles:insertAttribute name="section-h" />
     <!-- jQuery -->
     <script src="resources/js/jquery.js"></script>
 

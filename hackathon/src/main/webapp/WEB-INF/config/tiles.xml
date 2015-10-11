@@ -22,6 +22,7 @@
 		<put-attribute name="section-e" value="/WEB-INF/views/dynamic/section/contact.jsp"/>
 		<put-attribute name="section-f" value="/WEB-INF/views/dynamic/pages/rfp.jsp"/>
 		<put-attribute name="section-g" value="/WEB-INF/views/dynamic/pages/jobs.jsp"/>
+		<put-attribute name="section-h" value="/WEB-INF/views/dynamic/section/footer.jsp"/>
 	</definition>
 	<definition name="admin" extends="admin.definition">
 		<put-attribute name="title" value="Paypal Admin| Welcome"></put-attribute>

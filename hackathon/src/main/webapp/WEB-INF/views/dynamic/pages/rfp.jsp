@@ -4,13 +4,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<h2 class="section-heading">We've got what you need!</h2>
-				<hr class="light">
-				<p class="text-faded">Start Bootstrap has everything you need to
-					get your new website up and running in no time! All of the
-					templates and themes on Start Bootstrap are open source, free to
-					download, and easy to use. No strings attached!</p>
-				<a href="#" class="btn btn-default btn-xl">Get Started!</a>
+				<p>Current Project Documents:</p>
+				<a href="http://chandlerfoodbank.org/wp-content/uploads/2011/11/CCCC-Final-Bid-Package.zip" class="btn btn-default btn-xl">CCCC Final Bid Package</a>
+				<a href="http://chandlerfoodbank.org/wp-content/uploads/2011/11/CCCC-Technical-Specs-Compressed.zip" class="btn btn-default btn-xl">CCCC Technical Specs Compressed</a>
 			</div>
 		</div>
 	</div>

@@ -2,16 +2,17 @@
     pageEncoding="UTF-8"%>
 <section class="bg-color1" id="programs">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<h2 class="section-heading">We've got what you need!</h2>
-				<hr class="light">
-				<p class="text-faded">Start Bootstrap has everything you need to
-					get your new website up and running in no time! All of the
-					templates and themes on Start Bootstrap are open source, free to
-					download, and easy to use. No strings attached!</p>
-				<a href="#" class="btn btn-default btn-xl">Get Started!</a>
-			</div>
+		<div class="row nav-menu-item">
+			<uib-tabset>
+    			<uib-tab heading="Seniors" active="true">
+    			</uib-tab>
+    			<uib-tab heading="Community Action Program">
+    			</uib-tab>
+    			<uib-tab heading="Food Bank">
+    			</uib-tab>
+    			<uib-tab heading="Family resource Center">
+    			</uib-tab>
+  			</uib-tabset>
 		</div>
 	</div>
 </section>
