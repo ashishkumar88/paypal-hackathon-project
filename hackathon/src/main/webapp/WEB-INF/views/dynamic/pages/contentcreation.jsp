@@ -14,14 +14,14 @@
 					    	<div class="form-group">
 						    	<label for="inputid" class="col-lg-2 control-label">Content Id</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputid" ng-model="id" placeholder="Content Id" ng-required="true">
+						        <input type="text" class="form-control" id="inputid" ng-model="parent.id" placeholder="Content Id" ng-required="true">
 						      	</div>
 					    	</div>
 					    	
 						    <div class="form-group">
 						    	<label for="contType" class="col-lg-2 control-label">Content Type</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="contType" ng-model="type" placeholder="Enter Content Type" ng-required="true">
+						        <input type="text" class="form-control" id="contType" ng-model="parent.type" placeholder="Enter Content Type" ng-required="true">
 						      	</div>
 						    </div>
 						</div>
@@ -30,7 +30,7 @@
 							<div class="form-group">
 						    	<label for="inputCont" class="col-lg-2 control-label">Content</label>
 						      	<div class="col-lg-10">
-						        <textarea class="form-control" id="inputCont" ng-model="content" placeholder="Enter Content" ng-required="true" style="height:15%;"></textarea>
+						        <textarea class="form-control" id="inputCont" ng-model="parent.content" placeholder="Enter Content" ng-required="true" style="height:15%;"></textarea>
 						      	</div>
 					    	</div>
 					    		<!-- <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert> -->
@@ -88,7 +88,7 @@
 						    <div class="form-group">
 						      	<label for="editcID" class="col-lg-2 control-label">Content Id</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editcID" ng-model="e_id" placeholder="Content ID" required="true" readonly="true">
+						        <input type="text" class="form-control" id="editcID" ng-model="parent.e_id" placeholder="Content ID" required="true" readonly="true">
 						      	</div>
 						    </div>
 					
@@ -97,7 +97,7 @@
 						    <div class="form-group">
 						      	<label for="editcType" class="col-lg-2 control-label">Type</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editcType" ng-model="e_type" placeholder="Content Type">
+						        <input type="text" class="form-control" id="editcType" ng-model="parent.e_type" placeholder="Content Type">
 						      	</div>
 						    </div>
 						    
@@ -108,17 +108,17 @@
 							<div class="form-group">
 					    		<label for="inputcDesc" class="col-lg-2 control-label">Content</label>
 					      		<div class="col-lg-10">
-					        	<textarea class="form-control" id="inputcDesc" ng-model="e_content" placeholder="Enter Content" ng-required="true" style="height:15%;"></textarea>
+					        	<textarea class="form-control" id="inputcDesc" ng-model="parent.e_content" placeholder="Enter Content" ng-required="true" style="height:15%;"></textarea>
 					      	</div>
 							
 							<br><br>
 						    <div class="form-group" style="margin-top:3%">
 						      	<div class="col-lg-2 col-lg-offset-2">
-						        <button type="submit" ng-click="edit=true" class="btn btn-primary">Edit Content</button><br><br>
+						        <button type="submit" ng-click="parent.edit=true" class="btn btn-primary">Edit Content</button><br><br>
 						        </div>
 						        
-						        <div class="col-lg-2">
-						        <button type="submit" ng-click="del=true" class="btn btn-primary">Delete Content</button><br><br>
+						        <div class="col-lg-2 col-lg-offset-2">
+						        <button type="submit" ng-click="parent.del=true" class="btn btn-primary">Delete Content</button><br><br>
 						        </div>
 						    </div>
 						    

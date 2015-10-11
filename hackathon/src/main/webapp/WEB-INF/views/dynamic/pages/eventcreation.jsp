@@ -13,32 +13,32 @@
 					    	<div class="form-group">
 						    	<label for="inputeID" class="col-lg-2 control-label">Event Id</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputeID" ng-model="id" placeholder="Event Id" ng-required="true">
+						        <input type="text" class="form-control" id="inputeID" ng-model="parent.id" placeholder="Event Id" ng-required="true">
 						      	</div>
 					    	</div>
 					    	
 						    <div class="form-group">
 						    	<label for="inputeName" class="col-lg-2 control-label">Event Name</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputeName" ng-model="eventName" placeholder="Enter Event Name" ng-required="true">
+						        <input type="text" class="form-control" id="inputeName" ng-model="parent.eventName" placeholder="Enter Event Name" ng-required="true">
 						      	</div>
 						    </div>
 						    
 						    <div class="form-group">
 						    	<label for="inputeDesc" class="col-lg-2 control-label">Event Description</label>
 						      	<div class="col-lg-10">
-						        <textarea class="form-control" id="inputeDesc" ng-model="desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
+						        <textarea class="form-control" id="inputeDesc" ng-model="parent.desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
 						      	</div>
 					    	</div>
 					    	
 					    	<div class="form-group">
 						    	<label for="inputeTime" class="col-lg-2 control-label">Event time</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputeTime" ng-model="time" ng-value="mytime | date:'shortTime'" placeholder="Select Time" ng-required="true" readonly="true">
+						        <input type="text" class="form-control" id="inputeTime" ng-model="parent.time" ng-value="parent.mytime | date:'shortTime'" placeholder="Select Time" ng-required="true" readonly="true">
 						      	</div>
 						    </div>
 					    	<div class="col-lg-offset-2">
-					    	<uib-timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
+					    	<uib-timepicker ng-model="parent.mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></uib-timepicker>
 					    	</div>
 						</div>
 						
@@ -48,11 +48,11 @@
 					    		<div class="form-group">
 						    	<label for="inputeDate" class="col-lg-2 control-label">Event Date</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputeDate" ng-model=eventDate ng-value="dt| date:'fullDate'" placeholder="Enter Event Name" ng-required="true" readonly="true">
+						        <input type="text" class="form-control" id="inputeDate" ng-model=parent.eventDate ng-value="parent.dt| date:'fullDate'" placeholder="Enter Event Name" ng-required="true" readonly="true">
 						      	</div>
 						    	</div>
 							    <div class="col-lg-offset-3" style="display:inline-block; min-height:290px;">
-							      <uib-datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker>
+							      <uib-datepicker ng-model="parent.dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker>
 							    </div>
 						</div>
 							<div class="form-group">
@@ -110,28 +110,28 @@
 						    <div class="form-group">
 						      	<label for="editxID" class="col-lg-2 control-label">Event Id</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editxID" ng-model="e_id" placeholder="ID" required="true" readonly="true">
+						        <input type="text" class="form-control" id="editxID" ng-model="parent.e_id" placeholder="ID" required="true" readonly="true">
 						      	</div>
 						    </div>
 					
 						    <div class="form-group">
 						      	<label for="editxTitle" class="col-lg-2 control-label">Event Name</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editxTitle" ng-model="e_eventName" placeholder="Event Name">
+						        <input type="text" class="form-control" id="editxTitle" ng-model="parent.e_eventName" placeholder="Event Name">
 						      	</div>
 						    </div>
 						    
 						    <div class="form-group">
 						    	<label for="inputexDesc" class="col-lg-2 control-label">Event Description</label>
 						      	<div class="col-lg-10">
-						        <textarea class="form-control" id="inputexDesc" ng-model="e_desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
+						        <textarea class="form-control" id="inputexDesc" ng-model="parent.e_desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
 						      	</div>
 					    	</div>
 					    	
 					    	<div class="form-group">
 						    	<label for="inputexTime" class="col-lg-2 control-label">Event time</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputexTime" ng-model="e_time" ng-value="mytime | date:'shortTime'" placeholder="Select Time" ng-required="true" readonly="true">
+						        <input type="text" class="form-control" id="inputexTime" ng-model="parent.e_time" ng-value="mytime | date:'shortTime'" placeholder="Select Time" ng-required="true" readonly="true">
 						      	</div>
 						    </div>
 					    	<div class="col-lg-offset-2">
@@ -145,7 +145,7 @@
 							<div class="form-group">
 						    	<label for="inputeDate" class="col-lg-2 control-label">Event Date</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputeDate" ng-model="e_eventDate" ng-value="dt| date:'fullDate'" placeholder="Enter Event Name" ng-required="true" readonly="true">
+						        <input type="text" class="form-control" id="inputeDate" ng-model="parent.e_eventDate" ng-value="dt| date:'fullDate'" placeholder="Enter Event Name" ng-required="true" readonly="true">
 						      	</div>
 						    	</div>
 							    <div class="col-lg-offset-3" style="display:inline-block; min-height:290px;">
@@ -154,11 +154,11 @@
 								
 								<div class="form-group" style="margin-top:3%">
 						      	<div class="col-lg-2 col-lg-offset-2">
-						        <button type="submit" ng-click="edit=true" class="btn btn-primary">Edit Event</button><br><br>
+						        <button type="submit" ng-click="parent.edit=true" class="btn btn-primary">Edit Event</button><br><br>
 						        </div>
 						        
 						        <div class="col-lg-2 col-lg-offset-2">
-						        <button type="submit" ng-click="del=true" class="btn btn-primary">Delete Event</button><br><br>
+						        <button type="submit" ng-click="parent.del=true" class="btn btn-primary">Delete Event</button><br><br>
 						        </div>
 						    </div>
 						    

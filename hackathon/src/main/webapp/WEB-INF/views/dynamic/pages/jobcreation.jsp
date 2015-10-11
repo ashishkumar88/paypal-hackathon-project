@@ -14,14 +14,14 @@
 					    	<div class="form-group">
 						    	<label for="inputTitle" class="col-lg-2 control-label">Title</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputTitle" ng-model="title" placeholder="Title" ng-required="true">
+						        <input type="text" class="form-control" id="inputTitle" ng-model="parent.title" placeholder="Title" ng-required="true">
 						      	</div>
 					    	</div>
 					    	
 						    <div class="form-group">
 						    	<label for="inputType" class="col-lg-2 control-label">Type</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="inputType" ng-model="type" placeholder="Enter Job Type" ng-required="true">
+						        <input type="text" class="form-control" id="inputType" ng-model="parent.type" placeholder="Enter Job Type" ng-required="true">
 						      	</div>
 						    </div>
 						</div>
@@ -30,7 +30,7 @@
 							<div class="form-group">
 						    	<label for="inputDesc" class="col-lg-2 control-label">Description</label>
 						      	<div class="col-lg-10">
-						        <textarea class="form-control" id="inputDesc" ng-model="desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
+						        <textarea class="form-control" id="inputDesc" ng-model="parent.desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
 						      	</div>
 					    	</div>
 					    		<!-- <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert> -->
@@ -48,7 +48,7 @@
 			 <!-- END TAB1 -->
 			 
 			 <!-- TAB2 -->   	   
-			    <uib-tab heading="Search and Edit Jobs">
+			    <uib-tab heading="Search and Edit Jobs" ng-click="openTab()">
 			 <!-- SUB TAB1 -->   
 			    		<form class="form-horizontal" ng-show="sub_tab=='true'">
 						    <div class="table-responsive">
@@ -83,27 +83,27 @@
 			   <!-- SUB TAB1 END --> 		
 			    		
 			   <!-- SUB TAB2 -->
-			    		<form class="form-horizontal" ng-submit="editfunc()" ng-click="openTab()" ng-show="sub_tab=='false'" style = "margin-top:2%">
+			    		<form class="form-horizontal" ng-submit="editfunc()" ng-show="sub_tab=='false'" style = "margin-top:2%">
 			    			
 			    			<div class="col-lg-5">
 						    <div class="form-group">
 						      	<label for="editID" class="col-lg-2 control-label">ID</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editID" ng-model="e_id" placeholder="ID" required="true" readonly="true">
+						        <input type="text" class="form-control" id="editID" ng-model="parent.e_id" placeholder="ID" required="true" readonly="true">
 						      	</div>
 						    </div>
 					
 						    <div class="form-group">
 						      	<label for="editTitle" class="col-lg-2 control-label">Title</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editTitle" ng-model="e_title" placeholder="Title">
+						        <input type="text" class="form-control" id="editTitle" ng-model="parent.e_title" placeholder="Title">
 						      	</div>
 						    </div>
 						    
 						    <div class="form-group">
 						      	<label for="editType" class="col-lg-2 control-label">Type</label>
 						      	<div class="col-lg-10">
-						        <input type="text" class="form-control" id="editType" ng-model="e_type" placeholder="Type">
+						        <input type="text" class="form-control" id="editType" ng-model="parent.e_type" placeholder="Type">
 						      	</div>
 						    </div>
 						    
@@ -114,17 +114,17 @@
 							<div class="form-group">
 					    		<label for="inputDesc" class="col-lg-2 control-label">Description</label>
 					      		<div class="col-lg-10">
-					        	<textarea class="form-control" id="inputDesc" ng-model="e_desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
+					        	<textarea class="form-control" id="inputDesc" ng-model="parent.e_desc" placeholder="Enter Description" ng-required="true" style="height:15%;"></textarea>
 					      	</div>
 							
 							<br><br>
 						    <div class="form-group" style="margin-top:3%">
 						      	<div class="col-lg-2 col-lg-offset-2">
-						        <button type="submit" ng-click="edit=true" class="btn btn-primary">Edit Job</button><br><br>
+						        <button type="submit" ng-click="parent.edit=true" class="btn btn-primary">Edit Job</button><br><br>
 						        </div>
 						        
 						        <div class="col-lg-2 col-lg-offset-2">
-						        <button type="submit" ng-click="del=true" class="btn btn-primary">Delete Job</button><br><br>
+						        <button type="submit" ng-click="parent.del=true" class="btn btn-primary">Delete Job</button><br><br>
 						        </div>
 						    </div>
 						    
