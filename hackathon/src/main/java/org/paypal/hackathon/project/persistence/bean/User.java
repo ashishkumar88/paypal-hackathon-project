@@ -1,12 +1,9 @@
 package org.paypal.hackathon.project.persistence.bean;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -16,7 +13,6 @@ import javax.persistence.TemporalType;
 @Table(name = "user", catalog = "paypalhackathon")
 public class User {
 
-	private Long userId;
 	private String gender;
 	private String firstName;
 	private String middleName;
@@ -31,17 +27,9 @@ public class User {
 	private String zipCode;
 	private Date createdDate;
 	private Date modifiedDate;
+	private Boolean enabled = true;
 
 	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "user_id", unique = true, nullable = false)
-	public Long getUserId() {
-		return this.userId;
-	}
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
 	@Column(name = "gender")
 	public String getGender() {
 		return this.gender;
@@ -155,4 +143,14 @@ public class User {
 	public void setModifiedDate(Date modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
+
+	@Column(name = "enabled")
+	public Boolean getEnabled() {
+		return this.enabled;
+	}
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
+	}
+
+
 }

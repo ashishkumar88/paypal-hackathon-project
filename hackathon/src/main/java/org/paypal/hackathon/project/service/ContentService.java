@@ -31,12 +31,16 @@ public class ContentService {
 	public ResponseStatusView createContent(ContentRequestView contentRequestView) {
 		try{
 			ContentSettings contentSettings = this.mapModelToBean(contentRequestView);
-			this.contentDAO.save(contentSettings);
-			ResponseStatusView responseStatusView = ResponseStatusView.createSuccessResponse("Content has been successfully created.");
-			return responseStatusView;
+			if(this.contentDAO.save(contentSettings)) {
+				ResponseStatusView responseStatusView = ResponseStatusView.createSuccessResponse("Content has been successfully created.");
+				return responseStatusView;
+			} else {
+				ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while creating content. Duplicate Content or Server Error.");
+				return responseStatusView;
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
-			ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while creating content.");
+			ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while creating content. Duplicate Content or Server Error.");
 			return responseStatusView;
 		}
 	}
@@ -56,9 +60,13 @@ public class ContentService {
 	public ResponseStatusView updateContent(ContentRequestView contentRequestView) {
 		try{
 			ContentSettings contentSettings = this.mapModelToBean(contentRequestView);
-			this.contentDAO.update(contentSettings);
-			ResponseStatusView responseStatusView = ResponseStatusView.createSuccessResponse("Content has been successfully updated.");
-			return responseStatusView;
+			if(this.contentDAO.update(contentSettings)) {
+				ResponseStatusView responseStatusView = ResponseStatusView.createSuccessResponse("Content has been successfully update.");
+				return responseStatusView;
+			} else {
+				ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while updating content.");
+				return responseStatusView;
+			}
 		} catch(Exception e) {
 			ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while updating content.");
 			return responseStatusView;
@@ -68,9 +76,13 @@ public class ContentService {
 	public ResponseStatusView deleteContent(ContentRequestView contentRequestView) {
 		try{
 			ContentSettings contentSettings = this.mapModelToBean(contentRequestView);
-			this.contentDAO.deleteContent(contentSettings);
-			ResponseStatusView responseStatusView = ResponseStatusView.createSuccessResponse("Content has been successfully deleted.");
-			return responseStatusView;
+			if(this.contentDAO.deleteContent(contentSettings)) {
+				ResponseStatusView responseStatusView = ResponseStatusView.createSuccessResponse("Content has been successfully deleted.");
+				return responseStatusView;
+			} else {
+				ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while deleting content.");
+				return responseStatusView;
+			}
 		} catch(Exception e) {
 			ResponseStatusView responseStatusView = ResponseStatusView.createErrorResponse("Error while deleting content.");
 			return responseStatusView;

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<section id="contents" ng-controller="contentController">
+<section id="contents" class="border-bottom2" ng-controller="contentController">
 	<div class="container">
 		<div class="row">
 			

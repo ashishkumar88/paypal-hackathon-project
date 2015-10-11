@@ -11,23 +11,22 @@ import org.paypal.hackathon.project.dao.JobDAO;
 import org.paypal.hackathon.project.persistence.bean.JobSettings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@Transactional
 public class JobDAOImpl implements JobDAO{
 
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	public void save(JobSettings jobSettings) {
+	public boolean save(JobSettings jobSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(jobSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -36,16 +35,18 @@ public class JobDAOImpl implements JobDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 	@Override
-	public void update(JobSettings jobSettings) {
+	public boolean update(JobSettings jobSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(jobSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -54,6 +55,7 @@ public class JobDAOImpl implements JobDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 	@Override
@@ -78,13 +80,14 @@ public class JobDAOImpl implements JobDAO{
 	}
 
 	@Override
-	public void deleteJob(JobSettings job) {
+	public boolean deleteJob(JobSettings job) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.delete(job);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -93,5 +96,6 @@ public class JobDAOImpl implements JobDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 }

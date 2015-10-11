@@ -12,7 +12,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.1.6.RELEASE</spring.version>
-		<spring.security.version>4.0.2.RELEASE</spring.security.version>
+		<spring.security.version>3.2.4.RELEASE</spring.security.version>
 		<spring.context.support.version>4.0.6.RELEASE</spring.context.support.version>
 		<spring.data.version>1.9.0.RELEASE</spring.data.version>
 		<spring.tx.version>4.0.6.RELEASE</spring.tx.version>
@@ -323,6 +323,11 @@
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
 		</dependency>
 
 	</dependencies>

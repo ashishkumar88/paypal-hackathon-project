@@ -20,13 +20,14 @@ public class EventDAOImpl implements EventDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public void update(EventSettings eventSettings) {
+	public boolean update(EventSettings eventSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(eventSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -35,16 +36,18 @@ public class EventDAOImpl implements EventDAO {
 		} finally {
 			session.close();
 		}
+		return true;
 	}
 
 	@Override
-	public void save(EventSettings eventSettings) {
+	public boolean save(EventSettings eventSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(eventSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -53,6 +56,7 @@ public class EventDAOImpl implements EventDAO {
 		} finally {
 			session.close();
 		}
+		return true;
 	}
 
 	@Override
@@ -77,13 +81,14 @@ public class EventDAOImpl implements EventDAO {
 	}
 
 	@Override
-	public void deleteEvent(EventSettings eventSettings) {
+	public boolean deleteEvent(EventSettings eventSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.delete(eventSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -92,6 +97,7 @@ public class EventDAOImpl implements EventDAO {
 		} finally {
 			session.close();
 		}
+		return true;
 	}
 
 }

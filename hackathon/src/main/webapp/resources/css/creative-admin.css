@@ -55,6 +55,18 @@ p {
     background-color: #f05f40;
 }
 
+.bg-color1{
+    background-color: #1ABC9C;
+}
+
+.bg-color2{
+    background-color: #5CACE2;
+}
+
+.bg-color3{
+    background-color: #FF9A40;
+}
+
 .bg-dark {
     color: #fff;
     background-color: #222;
@@ -398,6 +410,18 @@ fieldset[disabled] .btn-default.active {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+}
+
+.border-bottom1 {
+	border-bottom:1px solid #1ABC9C
+}
+
+.border-bottom2 {
+	border-bottom:1px solid #5CACE2
+}
+
+.border-bottom3 {
+	border-bottom:1px solid #FF9A40
 }
 
 .btn-primary:hover,

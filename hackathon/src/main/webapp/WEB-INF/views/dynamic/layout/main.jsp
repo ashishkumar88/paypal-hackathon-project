@@ -71,6 +71,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="resources/js/creative.js"></script>
+    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
 </body>
 </html>
 

@@ -6,9 +6,9 @@ import org.paypal.hackathon.project.persistence.bean.EventSettings;
 
 public interface EventDAO {
 
-	public void save(EventSettings eventSettings);
-	public void update(EventSettings eventSettings);
+	public boolean save(EventSettings eventSettings);
+	public boolean update(EventSettings eventSettings);
 	public List<EventSettings> getAllEvents();
 	public EventSettings getEventById(Long id);
-	public void deleteEvent(EventSettings eventSettings);
+	public boolean deleteEvent(EventSettings eventSettings);
 }

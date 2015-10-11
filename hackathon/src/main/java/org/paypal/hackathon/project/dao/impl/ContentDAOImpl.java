@@ -53,13 +53,14 @@ public class ContentDAOImpl implements ContentDAO{
 	}
 
 	@Override
-	public void save(ContentSettings contentSettings) {
+	public boolean save(ContentSettings contentSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(contentSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -68,16 +69,18 @@ public class ContentDAOImpl implements ContentDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 	@Override
-	public void update(ContentSettings contentSettings) {
+	public boolean update(ContentSettings contentSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.saveOrUpdate(contentSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -86,16 +89,18 @@ public class ContentDAOImpl implements ContentDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 	@Override
-	public void deleteContent(ContentSettings contentSettings) {
+	public boolean deleteContent(ContentSettings contentSettings) {
 		final Session session = this.sessionFactory.openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
 			session.delete(contentSettings);
 			tx.commit();
+			return true;
 		} catch (final Exception e) {
 			e.printStackTrace();
 			if (tx != null) {
@@ -104,6 +109,7 @@ public class ContentDAOImpl implements ContentDAO{
 		} finally {
 			session.close();
 		}
+		return false;
 	}
 
 }
